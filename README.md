@@ -1,8 +1,6 @@
-# sf_lightning
+# PoC for Salesforce lightning
 ***Academic purposes Only***. 
-Attack against Salesforce lightning with guest privilege.
 
-# Abstract
 This tool dumps the data of Salesforce object through Aura lightning endpoint with the guest privilege.
 
 # Requirement
