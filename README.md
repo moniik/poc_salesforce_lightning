@@ -13,7 +13,7 @@ This tool dumps the data of Salesforce object through Aura lightning endpoint wi
 ```
 $ python exploit.py -h
 usage: exploit.py [-h] -u URL [-o [OBJECTS [OBJECTS ...]]] [-l] [-c]
-                  [-a AURA_CONTEXT] [-r RECORD_ID]
+                  [-a AURA_CONTEXT] [-r RECORD_ID] [-d]
 
 Exploit Salesforce through the aura endpoint with the guest privilege
 
@@ -33,6 +33,9 @@ optional arguments:
                         set your valid aura_context
   -r RECORD_ID, --record_id RECORD_ID
                         set the recode id to dump the record
+  -d, --dump_all_objects
+                        dump all objects accessible to guest users and saves
+                        them in the file.
 ```
 
 # Reference
