@@ -34,8 +34,8 @@ optional arguments:
   -r RECORD_ID, --record_id RECORD_ID
                         set the recode id to dump the record
   -d, --dump_all_objects
-                        dump all objects accessible to guest users and saves
-                        them in the file.
+                        dump all objects accessible to guest users and save
+                        them in the file under the "output" directory.
 ```
 
 # Reference
