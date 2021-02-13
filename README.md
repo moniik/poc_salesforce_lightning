@@ -1,7 +1,9 @@
 # PoC for Salesforce lightning
 ***Academic purposes Only***. 
 
+
 This tool dumps the data of Salesforce object through Aura lightning endpoint with the guest privilege.
+
 
 雑なコードだけど許してくれい
 
@@ -11,9 +13,9 @@ This tool dumps the data of Salesforce object through Aura lightning endpoint wi
 
 # Usage
 ```
-$ python exploit.py -h
+$ python3 exploit.py -h
 usage: exploit.py [-h] -u URL [-o [OBJECTS [OBJECTS ...]]] [-l] [-c]
-                  [-a AURA_CONTEXT] [-r RECORD_ID] [-d]
+                  [-a AURA_CONTEXT] [-r RECORD_ID] [-d] [-f]
 
 Exploit Salesforce through the aura endpoint with the guest privilege
 
@@ -33,9 +35,21 @@ optional arguments:
                         set your valid aura_context
   -r RECORD_ID, --record_id RECORD_ID
                         set the recode id to dump the record
-  -d, --dump_all_objects
-                        dump all objects accessible to guest users and save
-                        them in the file under the "output" directory.
+  -d, --dump_objects    dump a small number of objects accessible to guest
+                        users and saves them in the file.
+  -f, --full            if set with -d, dump all pages of objects.
+```
+
+# Examples 
+```
+# just list objects
+$ python3 exploit.py -u https://domain.force.com/path/s/ -l
+
+# show User and Account object
+$ python3 exploit.py -u https://domain.force.com/path/s/ -o User Account
+
+# save all objects(only page 0)
+$ python3 exploit.py -u https://domain.force.com/path/s/ -d
 ```
 
 # Reference
